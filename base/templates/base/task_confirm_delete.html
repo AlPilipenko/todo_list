@@ -1,0 +1,15 @@
+
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+
+  <a href="{% url 'tasks' %}">Cancel</a>
+
+  <!-- We do need to create a post request for deletion therefore form is required -->
+  <form method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete this task ? {{ task }}</p>
+    <input type="submit" value="Delete">
+  </form>
+
+{% endblock %}

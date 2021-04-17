@@ -1,23 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+
     <h2>Tasks:</h2>
     <table>
       <tr>
         <th>Item</th>
+        <!-- An empty header so that table looks correct -->
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
       {% for task in tasks %}
       <tr>
         <td>{{ task.title }}</td>
+        <td><a href="{% url 'task' task.id %}">View</a></td>
+        <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
+        <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
       </tr>
       {% empty %}
           <h3>No items in list</h3>
       {% endfor %}
     </table>
 
-  </body>
-</html>
+{% endblock %}
