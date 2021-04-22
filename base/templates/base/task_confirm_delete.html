@@ -4,7 +4,7 @@
 {% load static %}
 
   <div class="card-body">
-  <a href="{% url 'tasks' %}"><b><h4>&#8592; Go back</h4></b>  </a>
+  <a href="{% url 'tasks' %}"><b><h4>&#8592; Go back</h4></b></a>
   <!-- We do need to create a post request for deletion therefore form is required -->
   <form method="post">
     {% csrf_token %}
