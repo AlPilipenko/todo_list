@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% load static %}
+
+  <h3>Login</h3>
+  <form class="" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value='Login'>
+  </form>
+
+  <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+{% endblock %}
