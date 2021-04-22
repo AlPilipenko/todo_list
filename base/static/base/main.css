@@ -11,29 +11,31 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
-a, p {
-  color: grey;
+a {
+  color: black;
 }
 
-a:hover, p:hover{
+a:hover {
   color: #2a3f3d;
   font-weight: bold;
-
+  text-decoration: none;
 }
 
 .content {
-  background-color: #fffad7;
+  background: linear-gradient(90deg, grey 0%, #fafafa 100%);
   max-width: 550px;
-  margin-left: auto;
-  margin-right: auto;
-  /* border: black 3px solid; */
-  /* padding: 5px; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin:auto;
+  border: black 2.5px solid;
+  /* padding: 30px; */
 }
 
 .header-bar {
+  /* font-weight: bold; */
   display: flex;
   justify-content: space-between;
   background: linear-gradient(90deg, grey 0%, #fafafa 100%);
@@ -42,7 +44,7 @@ a:hover, p:hover{
 
 .header-bar a {
   color: inherit;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 /* ############################################################################ */
 
@@ -53,4 +55,89 @@ a:hover, p:hover{
   padding: 20px;
   background-color: white;
   border-top: 1px solid grey;
+}
+
+.task-title {
+  display: flex;
+}
+
+.task-title a {
+  /* text-decoration: none; */
+  color: #2a3f3d;
+  margin-left: 10px;
+}
+
+.task-complete-icon {
+  height: 20px;
+  width: 20px;
+  background: #2a3f3d;
+  border-radius: 50%;
+}
+
+.task-incomplete-icon {
+  height: 20px;
+  width: 20px;
+  background: grey;
+  border-radius: 50%;
+}
+
+.delete-link {
+  /* text-decoration: none; */
+  font-weight: bold;
+  color: red;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+/* ###################################################### */
+
+#search-add-wrapper {
+  /* margin-top: 20px; */
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, grey 0%, #fafafa 100%);
+  align-items: center;
+  padding: 10px;
+}
+
+#add-link {
+  font-weight: bold;
+  color: dodgerblue;
+  font-size: 42px;
+}
+
+#add-link:hover{
+  text-decoration: none;
+  font-weight: bold;
+  color: #2a3f3d;
+  font-size: 42px;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 10px;
+   width: 74%;
+}
+
+label {
+   padding-top: 10px !important;
+   display: block;
+}
+
+.button {
+   border: 1px solid black;
+   background-color: #FAFAFA;
+   color: black;
+   padding: 10px;
+   font-size: 14px;
+   border-radius: 5px;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.card-body {
+  padding: 20px;
 }
